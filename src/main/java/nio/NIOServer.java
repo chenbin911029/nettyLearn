@@ -1,4 +1,4 @@
-package NIO;
+package nio;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
@@ -75,7 +75,7 @@ public class NIOServer {
 			handlerAccept(key);
 			// 获得了可读的事件
 		} else if (key.isReadable()) {
-			handelerRead(key);
+			handlerRead(key);
 		}
 	}
 
@@ -104,7 +104,7 @@ public class NIOServer {
 	 * @param key
 	 * @throws IOException
 	 */
-	public void handelerRead(SelectionKey key) throws IOException {
+	public void handlerRead(SelectionKey key) throws IOException {
 		// 服务器可读取消息:得到事件发生的Socket通道
 		SocketChannel channel = (SocketChannel) key.channel();
 		// 创建读取的缓冲区
