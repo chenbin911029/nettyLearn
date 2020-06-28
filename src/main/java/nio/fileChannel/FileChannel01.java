@@ -55,6 +55,7 @@ public class FileChannel01 {
             long position = 0;
             long count = fromChannel.size();
             toChannel.transferFrom(fromChannel,position, count);
+//            fromChannel.transferTo(position,count,toChannel);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
